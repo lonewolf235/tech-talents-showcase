@@ -1,4 +1,4 @@
-import { Award, Trophy, BookOpen, Users, Database } from "lucide-react";
+import { Award, Trophy, BookOpen, Users, Database, ExternalLink } from "lucide-react";
 
 const Accomplishments = () => {
   const responsibilities = [
@@ -46,7 +46,7 @@ const Accomplishments = () => {
       issuer: "Google Cloud",
       year: "2025",
       description: "Demonstrated ability to launch enterprise-ready AI agents using Gemini and cloud APIs",
-      credentialLink: "#",
+      credentialLink: "https://partner.cloudskillsboost.google/course_templates/1212",
       featured: true
     },
     {
@@ -54,7 +54,7 @@ const Accomplishments = () => {
       issuer: "Udemy",
       year: "2025", 
       description: "Completed 22.5 hours of hands-on training by Mike Taylor & James Phoenix",
-      credentialLink: "#",
+      credentialLink: "https://www.udemy.com/certificate/UC-770a8fae-54ae-4549-8d65-978d2d172e01/",
       featured: true
     },
     {
@@ -62,7 +62,7 @@ const Accomplishments = () => {
       issuer: "Duke University (Coursera)",
       year: "2023",
       description: "Mathematical foundations for data science and machine learning",
-      credentialLink: "#",
+      credentialLink: "https://www.coursera.org/account/accomplishments/verify/YQ5CC7L5NLJG?utm_source=link&utm_medium=certificate&utm_content=cert_image&utm_campaign=pdf_header_button&utm_product=course",
       featured: false
     }
   ];
@@ -94,7 +94,8 @@ const Accomplishments = () => {
       description: "Top 6 finalist in District 41",
       year: "2023",
       category: "Communication",
-      featured: false
+      featured: false,
+      link: "https://www.linkedin.com/posts/prakash-v-s-tomar-49b4551b7_success-publicspeakingskills-jamsession-activity-6788849693528002560-67fg?utm_source=share&utm_medium=member_desktop"
     },
     {
       title: "Top 10 Finalist - Intelligex ML Hackathon",
@@ -119,7 +120,9 @@ const Accomplishments = () => {
       venue: "IEMPOWER 2022",
       description: "Presented introductory topics of Machine Learning and the selection between inference VS predictability",
       status: "In Publication by AIP Publishing",
-      year: "2022"
+      year: "2022",
+      certificateLink: "https://drive.google.com/file/d/1MnEEu7hGdeH2kou-UDhO-rncUWdFH_b0/view",
+      paperLink: "https://drive.google.com/file/d/1MnEEu7hGdeH2kou-UDhO-rncUWdFH_b0/view"
     }
   ];
 
@@ -193,12 +196,36 @@ const Accomplishments = () => {
                       <span className="skill-pill text-xs px-3 py-1">{pub.type}</span>
                       <span>{pub.venue} ({pub.year})</span>
                     </div>
-                    <p className="text-muted-foreground mb-2">
+                    <p className="text-muted-foreground mb-3">
                       {pub.description}
                     </p>
-                    <p className="text-accent font-medium">
+                    <p className="text-accent font-medium mb-3">
                       {pub.status}
                     </p>
+                    <div className="flex gap-3">
+                      {pub.certificateLink && (
+                        <a
+                          href={pub.certificateLink}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="inline-flex items-center gap-1 text-primary hover:text-accent transition-colors text-sm"
+                        >
+                          <ExternalLink className="w-3 h-3" />
+                          Certificate
+                        </a>
+                      )}
+                      {pub.paperLink && (
+                        <a
+                          href={pub.paperLink}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="inline-flex items-center gap-1 text-primary hover:text-accent transition-colors text-sm"
+                        >
+                          <ExternalLink className="w-3 h-3" />
+                          Paper
+                        </a>
+                      )}
+                    </div>
                   </div>
                 </div>
               </div>
@@ -225,7 +252,20 @@ const Accomplishments = () => {
                   <p className="text-sm text-muted-foreground mb-4">
                     {cert.description}
                   </p>
-                  <span className="text-xs text-muted-foreground">{cert.year}</span>
+                  <div className="flex items-center justify-between">
+                    <span className="text-xs text-muted-foreground">{cert.year}</span>
+                    {cert.credentialLink && (
+                      <a
+                        href={cert.credentialLink}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center gap-1 text-primary hover:text-accent transition-colors text-sm"
+                      >
+                        <ExternalLink className="w-3 h-3" />
+                        View
+                      </a>
+                    )}
+                  </div>
                 </div>
               </div>
             ))}
@@ -253,7 +293,20 @@ const Accomplishments = () => {
                   <p className="text-sm text-muted-foreground mb-3">
                     {award.description}
                   </p>
-                  <span className="text-xs text-muted-foreground">{award.year}</span>
+                  <div className="flex items-center justify-between">
+                    <span className="text-xs text-muted-foreground">{award.year}</span>
+                    {award.link && (
+                      <a
+                        href={award.link}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center gap-1 text-primary hover:text-accent transition-colors text-sm"
+                      >
+                        <ExternalLink className="w-3 h-3" />
+                        View
+                      </a>
+                    )}
+                  </div>
                 </div>
               </div>
             ))}

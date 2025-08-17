@@ -41,7 +41,17 @@ const Experience = () => {
         title: "Automated Dataset Processing Pipeline",
         description: "Computer vision data preparation automation",
         impact: "45% reduction in data prep time"
-      }
+      },
+      links: [
+        {
+          label: "Completion Certificate",
+          url: "https://drive.google.com/file/d/1Gd5rrablf8sLLKWE22kftHjz6JLePu1M/view"
+        },
+        {
+          label: "Company Website",
+          url: "https://happymonk.co/"
+        }
+      ]
     }
   ];
 
@@ -126,7 +136,7 @@ const Experience = () => {
                     </div>
 
                     {/* Technologies */}
-                    <div>
+                    <div className="mb-6">
                       <h5 className="font-semibold text-foreground mb-3">Technologies Used</h5>
                       <div className="flex flex-wrap gap-2">
                         {exp.technologies.map((tech) => (
@@ -136,6 +146,27 @@ const Experience = () => {
                         ))}
                       </div>
                     </div>
+
+                    {/* Links */}
+                    {exp.links && (
+                      <div>
+                        <h5 className="font-semibold text-foreground mb-3">Related Links</h5>
+                        <div className="flex flex-wrap gap-3">
+                          {exp.links.map((link, idx) => (
+                            <a
+                              key={idx}
+                              href={link.url}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className="inline-flex items-center gap-2 px-4 py-2 bg-primary/10 hover:bg-primary/20 text-primary rounded-lg transition-colors text-sm font-medium"
+                            >
+                              <ExternalLink className="w-4 h-4" />
+                              {link.label}
+                            </a>
+                          ))}
+                        </div>
+                      </div>
+                    )}
                   </div>
                 </div>
               </div>

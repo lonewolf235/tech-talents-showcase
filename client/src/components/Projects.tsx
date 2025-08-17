@@ -26,9 +26,9 @@ const Projects = () => {
         deployment: "Government production"
       },
       links: {
-        github: "https://github.com/lonewolf235/RoadGuard",
+        github: "https://github.com/lonewolf235/Pothole-Detection",
         demo: null,
-        research: "#"
+        research: "https://drive.google.com/file/d/1nuGFFv0yXHisdyHOiuizHmfIAZNB7Yvz/view"
       },
       featured: true,
       status: "Production",
@@ -82,7 +82,7 @@ const Projects = () => {
       },
       links: {
         github: "https://github.com/lonewolf235/Technical-Repo-Analyzer",
-        demo: "https://technical-repo-analyzer.streamlit.app"
+        demo: "https://www.youtube.com/watch?v=p_Bv2DO-TR4"
       },
       featured: false,
       status: "Live Demo",
