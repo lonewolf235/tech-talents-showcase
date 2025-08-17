@@ -1,5 +1,11 @@
 import { useState } from "react";
 import { Code, Database, Cloud, Wrench, Brain, BarChart3, Star, Zap } from "lucide-react";
+import { 
+  SiPython, SiJavascript, SiTypescript, SiGo, SiReact, SiNextdotjs, SiNodedotjs, 
+  SiTensorflow, SiPytorch, SiOpenai, SiFastapi, SiStreamlit, SiPandas, SiNumpy, 
+  SiJupyter, SiPostgresql, SiMongodb, SiLinux, SiGit, SiDocker, SiGooglecloud, 
+  SiAmazon, SiMlflow
+} from "react-icons/si";
 
 const Skills = () => {
   const [selectedCategory, setSelectedCategory] = useState('all');
@@ -10,10 +16,10 @@ const Skills = () => {
       title: 'Programming Languages',
       icon: <Code className="w-5 h-5" />,
       skills: [
-        { name: 'Python', level: 95, description: 'Primary language for ML/AI development' },
-        { name: 'SQL', level: 90, description: 'Database design and complex queries' },
-        { name: 'Java', level: 75, description: 'Enterprise applications and backend' },
-        { name: 'Bash', level: 80, description: 'System automation and scripting' }
+        { name: 'Python', level: 95, description: 'Primary language for ML/AI development', icon: <SiPython className="w-4 h-4 text-yellow-500" /> },
+        { name: 'SQL', level: 90, description: 'Database design and complex queries', icon: '🗃️' },
+        { name: 'Java', level: 75, description: 'Enterprise applications and backend', icon: '☕' },
+        { name: 'Bash', level: 80, description: 'System automation and scripting', icon: '💻' }
       ]
     },
     {
@@ -23,9 +29,9 @@ const Skills = () => {
       skills: [
         { name: 'LangChain', level: 95, description: 'LLM application development' },
         { name: 'HuggingFace', level: 90, description: 'Transformer models and deployment' },
-        { name: 'TensorFlow', level: 85, description: 'Deep learning and model training' },
+        { name: 'TensorFlow', level: 85, description: 'Deep learning and model training', icon: <SiTensorflow className="w-4 h-4 text-orange-500" /> },
         { name: 'Keras', level: 85, description: 'High-level neural networks API' },
-        { name: 'PyTorch', level: 85, description: 'Research and production models' },
+        { name: 'PyTorch', level: 85, description: 'Research and production models', icon: <SiPytorch className="w-4 h-4 text-red-500" /> },
         { name: 'Scikit-Learn', level: 90, description: 'Classical ML algorithms' }
       ]
     },
@@ -47,11 +53,11 @@ const Skills = () => {
       title: 'Web Frameworks & Data',
       icon: <Cloud className="w-5 h-5" />,
       skills: [
-        { name: 'FastAPI', level: 95, description: 'High-performance web APIs' },
-        { name: 'Streamlit', level: 85, description: 'Rapid ML app prototyping' },
-        { name: 'Pandas', level: 90, description: 'Data manipulation and analysis' },
-        { name: 'NumPy', level: 85, description: 'Numerical computing' },
-        { name: 'Matplotlib', level: 85, description: 'Data visualization and plotting' }
+        { name: 'FastAPI', level: 95, description: 'High-performance web APIs', icon: <SiFastapi className="w-4 h-4 text-green-600" /> },
+        { name: 'Streamlit', level: 85, description: 'Rapid ML app prototyping', icon: <SiStreamlit className="w-4 h-4 text-red-500" /> },
+        { name: 'Pandas', level: 90, description: 'Data manipulation and analysis', icon: <SiPandas className="w-4 h-4 text-blue-600" /> },
+        { name: 'NumPy', level: 85, description: 'Numerical computing', icon: <SiNumpy className="w-4 h-4 text-blue-500" /> },
+        { name: 'Matplotlib', level: 85, description: 'Data visualization and plotting', icon: '📊' }
       ]
     },
     {
@@ -72,13 +78,13 @@ const Skills = () => {
       title: 'Development Tools & Databases',
       icon: <Wrench className="w-5 h-5" />,
       skills: [
-        { name: 'Git', level: 90, description: 'Version control and collaboration' },
-        { name: 'Jupyter', level: 95, description: 'Interactive development and prototyping' },
-        { name: 'VSCode', level: 90, description: 'IDE and development environment' },
-        { name: 'PostgreSQL', level: 85, description: 'Advanced relational database' },
-        { name: 'MongoDB', level: 80, description: 'NoSQL document database' },
-        { name: 'Linux', level: 90, description: 'System administration and optimization' },
-        { name: 'Windows', level: 80, description: 'Desktop environment and development' }
+        { name: 'Git', level: 90, description: 'Version control and collaboration', icon: <SiGit className="w-4 h-4 text-orange-600" /> },
+        { name: 'Jupyter', level: 95, description: 'Interactive development and prototyping', icon: <SiJupyter className="w-4 h-4 text-orange-500" /> },
+        { name: 'VSCode', level: 90, description: 'IDE and development environment', icon: '🔧' },
+        { name: 'PostgreSQL', level: 85, description: 'Advanced relational database', icon: <SiPostgresql className="w-4 h-4 text-blue-600" /> },
+        { name: 'MongoDB', level: 80, description: 'NoSQL document database', icon: <SiMongodb className="w-4 h-4 text-green-600" /> },
+        { name: 'Linux', level: 90, description: 'System administration and optimization', icon: <SiLinux className="w-4 h-4 text-yellow-500" /> },
+        { name: 'Windows', level: 80, description: 'Desktop environment and development', icon: '🪟' }
       ]
     }
   ];
@@ -154,7 +160,7 @@ const Skills = () => {
                     <div key={index} className="group p-3 rounded-lg bg-muted/10 hover:bg-muted/20 transition-all duration-300 border border-border/50 hover:border-primary/30">
                       <div className="flex items-center justify-between mb-2">
                         <div className="flex items-center space-x-2">
-                          <span className="text-lg">{skillLevel.icon}</span>
+                          <span className="text-lg">{skill.icon || skillLevel.icon}</span>
                           <span className="font-medium text-foreground group-hover:text-primary transition-colors">
                             {skill.name}
                           </span>

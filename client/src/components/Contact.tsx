@@ -155,11 +155,11 @@ const Contact = () => {
                 Download my complete resume with detailed experience, projects, and achievements.
               </p>
               <Button 
-                onClick={() => window.open('mailto:prakashvstomar@gmail.com?subject=Resume Request', '_blank')}
+                onClick={() => window.open('https://drive.google.com/file/d/1pyA5W6gESVMmg-BMcIraZeJ-3l4gSUHs/view?usp=sharing', '_blank')}
                 className="btn-hero w-full"
               >
                 <Download className="w-4 h-4 mr-2" />
-                Request Resume PDF
+                Resume
               </Button>
             </div>
           </div>
