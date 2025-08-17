@@ -8,53 +8,53 @@
 
 @layer base {
   :root {
-    /* Core Colors - Data Science Theme */
-    --background: 248 250 252; /* slate-50 */
-    --foreground: 226 29% 10%; /* deep slate */
+    /* Core Colors - Black & Blood Red Theme */
+    --background: 0 0% 8%; /* deep black */
+    --foreground: 0 0% 95%; /* near white */
 
-    --card: 255 255 255; /* white */
-    --card-foreground: 226 29% 10%;
+    --card: 0 0% 12%; /* dark gray */
+    --card-foreground: 0 0% 95%;
 
-    --popover: 255 255 255;
-    --popover-foreground: 226 29% 10%;
+    --popover: 0 0% 12%;
+    --popover-foreground: 0 0% 95%;
 
-    /* Primary - Deep Indigo (Data/AI theme) */
-    --primary: 239 84% 67%; /* indigo-500 */
-    --primary-foreground: 255 255 255;
-    --primary-glow: 239 84% 85%; /* lighter indigo */
+    /* Primary - Blood Red */
+    --primary: 0 85% 45%; /* blood red */
+    --primary-foreground: 0 0% 100%;
+    --primary-glow: 0 85% 65%; /* lighter blood red */
 
-    /* Secondary - Professional Slate */
-    --secondary: 226 24% 94%; /* slate-100 */
-    --secondary-foreground: 226 29% 10%;
+    /* Secondary - Dark Gray */
+    --secondary: 0 0% 18%; /* dark gray */
+    --secondary-foreground: 0 0% 95%;
 
-    /* Accent - Teal (Tech/Modern) */
-    --accent: 180 98% 44%; /* teal-500 */
-    --accent-foreground: 255 255 255;
-    --accent-glow: 180 98% 85%; /* light teal */
+    /* Accent - Deep Red */
+    --accent: 0 75% 35%; /* deeper red */
+    --accent-foreground: 0 0% 100%;
+    --accent-glow: 0 75% 55%; /* lighter deep red */
 
     /* Muted */
-    --muted: 226 24% 94%; /* slate-100 */
-    --muted-foreground: 226 14% 50%; /* slate-500 */
+    --muted: 0 0% 20%; /* muted dark */
+    --muted-foreground: 0 0% 60%; /* muted light */
 
     /* Destructive */
-    --destructive: 0 84% 60%;
-    --destructive-foreground: 255 255 255;
+    --destructive: 0 90% 50%;
+    --destructive-foreground: 0 0% 100%;
 
     /* Borders & Inputs */
-    --border: 226 20% 88%; /* slate-200 */
-    --input: 226 20% 88%;
-    --ring: 239 84% 67%;
+    --border: 0 0% 25%; /* dark border */
+    --input: 0 0% 25%;
+    --ring: 0 85% 45%;
 
-    /* Custom Data Science Variables */
-    --success: 142 76% 36%; /* emerald-600 */
-    --warning: 43 96% 56%; /* yellow-400 */
-    --info: 212 100% 48%; /* blue-600 */
+    /* Custom Variables */
+    --success: 120 60% 45%; /* dark green */
+    --warning: 45 90% 55%; /* orange */
+    --info: 210 80% 55%; /* blue */
 
-    /* Gradients */
-    --gradient-hero: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--accent)));
-    --gradient-card: linear-gradient(145deg, hsl(var(--card)), hsl(var(--muted)));
-    --gradient-accent: linear-gradient(90deg, hsl(var(--accent)), hsl(var(--primary)));
-    --gradient-data: linear-gradient(180deg, hsl(var(--primary-glow) / 0.1), transparent);
+    /* Gradients - Black to Blood Red */
+    --gradient-hero: linear-gradient(135deg, hsl(0 0% 8%), hsl(0 85% 45%));
+    --gradient-card: linear-gradient(145deg, hsl(0 0% 12%), hsl(0 0% 18%));
+    --gradient-accent: linear-gradient(90deg, hsl(0 85% 45%), hsl(0 75% 35%));
+    --gradient-data: linear-gradient(180deg, hsl(0 85% 45% / 0.1), transparent);
 
     /* Shadows */
     --shadow-elegant: 0 10px 30px -10px hsl(var(--primary) / 0.2);
@@ -85,54 +85,54 @@
   }
 
   .dark {
-    /* Dark Mode - Data Science Theme */
-    --background: 226 29% 8%; /* dark slate */
-    --foreground: 226 10% 92%; /* light slate */
+    /* Dark Mode - Same Black & Blood Red Theme */
+    --background: 0 0% 5%; /* deeper black */
+    --foreground: 0 0% 98%; /* brighter white */
 
-    --card: 226 29% 10%; /* darker slate */
-    --card-foreground: 226 10% 92%;
+    --card: 0 0% 8%; /* darker card */
+    --card-foreground: 0 0% 98%;
 
-    --popover: 226 29% 10%;
-    --popover-foreground: 226 10% 92%;
+    --popover: 0 0% 8%;
+    --popover-foreground: 0 0% 98%;
 
-    /* Primary remains vibrant in dark mode */
-    --primary: 239 84% 72%; /* bright indigo */
-    --primary-foreground: 226 29% 8%;
-    --primary-glow: 239 84% 85%;
+    /* Primary - Brighter blood red for dark mode */
+    --primary: 0 90% 55%; /* brighter blood red */
+    --primary-foreground: 0 0% 100%;
+    --primary-glow: 0 90% 75%;
 
-    --secondary: 226 20% 18%; /* dark slate */
-    --secondary-foreground: 226 10% 92%;
+    --secondary: 0 0% 15%; /* darker secondary */
+    --secondary-foreground: 0 0% 98%;
 
-    /* Accent - Bright teal for dark mode */
-    --accent: 180 98% 54%; /* bright teal */
-    --accent-foreground: 226 29% 8%;
-    --accent-glow: 180 98% 85%;
+    /* Accent - Deeper red for dark mode */
+    --accent: 0 80% 40%; /* deeper red */
+    --accent-foreground: 0 0% 100%;
+    --accent-glow: 0 80% 65%;
 
-    --muted: 226 20% 18%;
-    --muted-foreground: 226 14% 60%;
+    --muted: 0 0% 15%;
+    --muted-foreground: 0 0% 70%;
 
-    --destructive: 0 84% 70%;
-    --destructive-foreground: 226 29% 8%;
+    --destructive: 0 95% 60%;
+    --destructive-foreground: 0 0% 100%;
 
-    --border: 226 20% 20%;
-    --input: 226 20% 20%;
-    --ring: 239 84% 72%;
+    --border: 0 0% 20%;
+    --input: 0 0% 20%;
+    --ring: 0 90% 55%;
 
     /* Custom variables for dark mode */
-    --success: 142 76% 46%;
-    --warning: 43 96% 66%;
-    --info: 212 100% 58%;
+    --success: 120 65% 50%;
+    --warning: 45 95% 60%;
+    --info: 210 85% 60%;
 
-    /* Dark mode gradients */
-    --gradient-hero: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--accent)));
-    --gradient-card: linear-gradient(145deg, hsl(var(--card)), hsl(var(--muted)));
-    --gradient-accent: linear-gradient(90deg, hsl(var(--accent)), hsl(var(--primary)));
-    --gradient-data: linear-gradient(180deg, hsl(var(--primary-glow) / 0.1), transparent);
+    /* Dark mode gradients - Enhanced black to red */
+    --gradient-hero: linear-gradient(135deg, hsl(0 0% 5%), hsl(0 90% 55%));
+    --gradient-card: linear-gradient(145deg, hsl(0 0% 8%), hsl(0 0% 15%));
+    --gradient-accent: linear-gradient(90deg, hsl(0 90% 55%), hsl(0 80% 40%));
+    --gradient-data: linear-gradient(180deg, hsl(0 90% 55% / 0.15), transparent);
 
     /* Enhanced shadows for dark mode */
-    --shadow-elegant: 0 10px 30px -10px hsl(var(--primary) / 0.3);
-    --shadow-card: 0 4px 20px -4px hsl(0 0% 0% / 0.3);
-    --shadow-glow: 0 0 40px hsl(var(--primary-glow) / 0.4);
+    --shadow-elegant: 0 10px 30px -10px hsl(0 90% 55% / 0.4);
+    --shadow-card: 0 4px 20px -4px hsl(0 0% 0% / 0.5);
+    --shadow-glow: 0 0 40px hsl(0 90% 75% / 0.5);
   }
 }
 
