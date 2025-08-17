@@ -2,11 +2,21 @@
 
 ## Overview
 
-This is a modern, professional portfolio website for an AI/ML Engineer built with React, TypeScript, and a full-stack architecture. The site showcases professional experience, technical skills, projects, and achievements in the AI/ML field. It features a dark theme with red accents, responsive design, and interactive components to create an engaging user experience.
+This is a modern, professional portfolio website for an AI/ML Engineer built with React, TypeScript, and a full-stack architecture. The site showcases professional experience, technical skills, projects, and achievements in the AI/ML field. It features a high-contrast charcoal and electric blue theme, responsive design, and interactive components to create an engaging user experience.
 
 ## User Preferences
 
 Preferred communication style: Simple, everyday language.
+
+## Recent Changes
+
+### January 17, 2025
+- **Theme Update**: Changed entire color scheme from black/red to high-contrast charcoal and electric blue theme
+- **Skills Update**: Updated skills to reflect actual expertise - removed Docker, added MCP, Agno, Keras, Matplotlib, Seaborn, PostgreSQL, MongoDB, Windows, Raspberry Pi, Loguru
+- **Achievement Added**: Added GATE DA 2024 AIR 2552 achievement to About section
+- **Project Cleanup**: Removed DigiBOLT AI from projects (kept in experience section as requested)
+- **Favicon**: Added custom SVG favicon with electric blue gradient and professional "P" monogram
+- **SEO**: Enhanced meta tags with project description and GATE achievement
 
 ## System Architecture
 
@@ -26,10 +36,11 @@ Preferred communication style: Simple, everyday language.
 - **Development Setup**: Hot module replacement with Vite integration for seamless development experience
 
 ### Design System
-- **Color Scheme**: Dark theme with deep black background (--background: 0 0% 8%) and blood red primary colors (--primary: 0 85% 45%)
+- **Color Scheme**: High-contrast charcoal and electric blue theme with charcoal black background (#0A0A0A), surface gray (#141414), blue-tinted white text (#F5F7FA), muted blue-gray (#A6B0C3), and electric blue accent (#3298FF)
 - **Typography**: Inter font family for readability with JetBrains Mono for code elements
 - **Layout**: Responsive grid system with mobile-first approach
 - **Components**: Consistent component library using Radix UI primitives with custom styling
+- **Favicon**: Custom SVG favicon with electric blue gradient and "P" monogram
 
 ### Content Management
 - **Static Content**: JSON-based content management in `client/public/content.json` for easy updates

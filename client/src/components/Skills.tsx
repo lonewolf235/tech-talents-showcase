@@ -24,6 +24,7 @@ const Skills = () => {
         { name: 'LangChain', level: 95, description: 'LLM application development' },
         { name: 'HuggingFace', level: 90, description: 'Transformer models and deployment' },
         { name: 'TensorFlow', level: 85, description: 'Deep learning and model training' },
+        { name: 'Keras', level: 85, description: 'High-level neural networks API' },
         { name: 'PyTorch', level: 85, description: 'Research and production models' },
         { name: 'Scikit-Learn', level: 90, description: 'Classical ML algorithms' }
       ]
@@ -36,18 +37,22 @@ const Skills = () => {
         { name: 'LangGraph', level: 90, description: 'Multi-agent system orchestration' },
         { name: 'Guardrails', level: 85, description: 'LLM safety and validation' },
         { name: 'Ollama', level: 80, description: 'Local LLM deployment' },
-        { name: 'CrewAI', level: 75, description: 'Agent collaboration frameworks' }
+        { name: 'CrewAI', level: 75, description: 'Agent collaboration frameworks' },
+        { name: 'MCP', level: 80, description: 'Model Control Protocol' },
+        { name: 'Agno', level: 75, description: 'AI agent frameworks' }
       ]
     },
     {
-      id: 'cloud',
-      title: 'Cloud & Infrastructure',
+      id: 'web-frameworks',
+      title: 'Web Frameworks & Data',
       icon: <Cloud className="w-5 h-5" />,
       skills: [
         { name: 'FastAPI', level: 95, description: 'High-performance web APIs' },
-        { name: 'Docker', level: 85, description: 'Containerization and deployment' },
-        { name: 'Linux', level: 90, description: 'System administration and optimization' },
-        { name: 'MLflow', level: 85, description: 'ML lifecycle management' }
+        { name: 'Streamlit', level: 85, description: 'Rapid ML app prototyping' },
+        { name: 'Pandas', level: 90, description: 'Data manipulation and analysis' },
+        { name: 'NumPy', level: 85, description: 'Numerical computing' },
+        { name: 'Matplotlib', level: 85, description: 'Data visualization and plotting' },
+        { name: 'Seaborn', level: 80, description: 'Statistical data visualization' }
       ]
     },
     {
@@ -55,21 +60,27 @@ const Skills = () => {
       title: 'Observability & Monitoring',
       icon: <Database className="w-5 h-5" />,
       skills: [
+        { name: 'MLflow', level: 90, description: 'ML lifecycle management' },
         { name: 'OpenTelemetry', level: 85, description: 'Distributed tracing and metrics' },
         { name: 'Jaeger', level: 80, description: 'Request tracing and debugging' },
         { name: 'Evidently AI', level: 85, description: 'ML model monitoring and drift detection' },
-        { name: 'LangKit', level: 80, description: 'LLM observability and evaluation' }
+        { name: 'LangKit', level: 80, description: 'LLM observability and evaluation' },
+        { name: 'Loguru', level: 80, description: 'Advanced Python logging' }
       ]
     },
     {
       id: 'tools',
-      title: 'Development Tools',
+      title: 'Development Tools & Databases',
       icon: <Wrench className="w-5 h-5" />,
       skills: [
         { name: 'Git', level: 90, description: 'Version control and collaboration' },
         { name: 'Jupyter', level: 95, description: 'Interactive development and prototyping' },
         { name: 'VSCode', level: 90, description: 'IDE and development environment' },
-        { name: 'Streamlit', level: 85, description: 'Rapid ML app prototyping' }
+        { name: 'PostgreSQL', level: 85, description: 'Advanced relational database' },
+        { name: 'MongoDB', level: 80, description: 'NoSQL document database' },
+        { name: 'Linux', level: 90, description: 'System administration and optimization' },
+        { name: 'Windows', level: 80, description: 'Desktop environment and development' },
+        { name: 'Raspberry Pi', level: 75, description: 'IoT and embedded systems' }
       ]
     }
   ];

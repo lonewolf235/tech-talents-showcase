@@ -14,8 +14,8 @@ const About = () => {
     },
     {
       icon: <Award className="w-6 h-6" />,
-      title: "Technical Leadership",
-      description: "Led ML workshops for 300+ students and professionals"
+      title: "GATE DA 2024 - AIR 2552",
+      description: "All India Rank 2552 in Graduate Aptitude Test in Engineering Data Science & AI"
     },
     {
       icon: <Users className="w-6 h-6" />,
