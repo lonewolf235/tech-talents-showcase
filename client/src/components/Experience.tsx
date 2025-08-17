@@ -178,11 +178,11 @@ const Experience = () => {
         <div className="text-center mt-16">
           <p className="text-muted-foreground mb-6">Want to see the complete professional journey?</p>
           <button 
-            onClick={() => window.open('mailto:prakashvstomar@gmail.com?subject=Resume Request', '_blank')}
+            onClick={() => window.open('https://drive.google.com/file/d/1pyA5W6gESVMmg-BMcIraZeJ-3l4gSUHs/view?usp=sharing', '_blank')}
             className="btn-hero inline-flex items-center gap-2"
           >
             <ExternalLink className="w-5 h-5" />
-            Request Full Resume
+            Resume
           </button>
         </div>
       </div>

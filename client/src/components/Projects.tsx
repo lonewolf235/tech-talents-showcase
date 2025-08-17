@@ -321,7 +321,7 @@ const Projects = () => {
                 <div className="bg-muted/50 p-2 rounded">
                   <span className="text-muted-foreground block">Key Metric</span>
                   <span className="font-medium text-foreground">
-                    {project.metrics.accuracy || project.metrics.timeReduction || project.metrics.sensors || project.metrics.improvement || project.metrics.efficiency || "N/A"}
+                    {project.metrics.accuracy || project.metrics.timeReduction || project.metrics.sensors || project.metrics.improvement || "N/A"}
                   </span>
                 </div>
                 <div className="bg-muted/50 p-2 rounded">
@@ -351,7 +351,7 @@ const Projects = () => {
                     size="sm" 
                     variant="outline" 
                     className="flex-1"
-                    onClick={() => window.open(project.links.demo, '_blank')}
+                    onClick={() => window.open(project.links.demo!, '_blank')}
                   >
                     <Eye className="w-3 h-3 mr-1" />
                     Demo
@@ -362,7 +362,7 @@ const Projects = () => {
                     size="sm" 
                     variant="outline" 
                     className="flex-1"
-                    onClick={() => window.open(project.links.github, '_blank')}
+                    onClick={() => window.open(project.links.github!, '_blank')}
                   >
                     <Github className="w-3 h-3 mr-1" />
                     Code
