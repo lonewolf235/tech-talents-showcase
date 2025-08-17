@@ -1,9 +1,11 @@
 import { useState } from "react";
 import { ExternalLink, Github, Eye, Database, Zap, Award, Code, BarChart3 } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import confusionMatrix from "@/assets/confusion-matrix.jpg";
-import trainingCurve from "@/assets/training-curve.jpg";
-import featureImportance from "@/assets/feature-importance.jpg";
+import faceFlix from "@/assets/projects/faceflix.jpg";
+import payloadDrone from "@/assets/projects/payload-drone.jpg";
+import mnistRedefined from "@/assets/projects/mnist-redefined.jpg";
+import repoAnalyzer from "@/assets/projects/repo-analyzer.jpg";
+import roadGuard from "@/assets/projects/roadguard.jpg";
 
 const Projects = () => {
   const [selectedProject, setSelectedProject] = useState<number | null>(null);
@@ -11,88 +13,170 @@ const Projects = () => {
   const projects = [
     {
       id: 1,
-      title: "RoadGuard: Smart Pothole Detection",
+      title: "RoadGuard - Smart Pothole Detection",
       category: "Computer Vision",
-      summary: "Government-backed AI system for automated road hazard detection using YOLOv8",
-      description: "Telangana Government project employing YOLOv8 technology to analyze road images and videos, successfully identifying and cataloging 3000+ large potholes within targeted regions.",
-      image: confusionMatrix,
-      technologies: ["YOLOv8", "Computer Vision", "Python", "OpenCV", "Government Partnership"],
+      summary: "Telangana Government project reducing road accidents by 25% using YOLOv8",
+      description: "RoadGuard is a government-sponsored project for Telangana state, strategically employing YOLOv8 technology to analyze road images and videos. Successfully identified and cataloged 3000+ large potholes within targeted regions, contributing to improved road safety.",
+      image: roadGuard,
+      technologies: ["YOLOv8", "Python", "OpenCV", "PyTorch", "Computer Vision", "GIS"],
       metrics: {
-        datasetSize: "3,000+ annotated potholes",
-        accuracy: "94.2% detection accuracy",
-        impact: "25% reduction in road accidents",
-        deployment: "Government production system"
+        datasetSize: "3000+ potholes cataloged",
+        accuracy: "High precision detection",
+        impact: "25% accident reduction",
+        deployment: "Government production"
       },
       links: {
-        github: "#",
-        demo: "#",
+        github: "https://github.com/lonewolf235/RoadGuard",
+        demo: null,
         research: "#"
       },
       featured: true,
       status: "Production",
       achievements: [
-        "Reduced reported road accidents by 25% in designated Telangana areas",
-        "Processed 10,000+ road images with real-time inference",
-        "Integrated with government infrastructure monitoring systems",
-        "Achieved 94.2% precision in pothole detection under various weather conditions"
+        "Reduced reported road accidents by 25% in Telangana regions",
+        "Successfully cataloged 3000+ large potholes",
+        "Implemented real-time detection with high accuracy",
+        "Integrated with government infrastructure systems"
       ]
     },
     {
       id: 2,
-      title: "Technical Repo Analyzer",
-      category: "Generative AI",
-      summary: "Full-stack GenAI application for automated code complexity analysis",
-      description: "Developed using Python, OpenAI API, GitHub API, and LangChain for comprehensive code analysis with a Streamlit-hosted web interface.",
-      image: featureImportance,
-      technologies: ["OpenAI API", "LangChain", "Streamlit", "GitHub API", "Python"],
+      title: "FaceFlix - Facial Recognition Movie Recommender",
+      category: "Computer Vision",
+      summary: "AI-powered movie recommendation system using facial emotion recognition",
+      description: "FaceFlix scans facial emotions and recommends movies based on detected emotional states. Built as a follow-up to my facial recognition attendance system, it combines computer vision with recommendation algorithms to create a personalized entertainment experience.",
+      image: faceFlix,
+      technologies: ["Python", "OpenCV", "TensorFlow", "DeepFace", "Scikit-Learn", "Flask"],
       metrics: {
-        datasetSize: "500+ repositories analyzed",
-        performance: "20 hours saved per review cycle",
-        accuracy: "89% error detection rate",
-        deployment: "Cloud-hosted web application"
+        accuracy: "95% emotion detection",
+        emotions: "7 emotion categories",
+        recommendations: "Real-time processing",
+        deployment: "Web application"
       },
       links: {
-        github: "#",
-        demo: "#"
+        github: "https://github.com/lonewolf235/FaceFlix",
+        demo: null
       },
       featured: false,
-      status: "Live Demo",
+      status: "Completed",
       achievements: [
-        "Automated error detection saving 20+ hours per code review cycle",
-        "Integrated multiple AI APIs for comprehensive analysis",
-        "Built intuitive Streamlit interface for non-technical users",
-        "Analyzed 500+ GitHub repositories with detailed complexity metrics"
+        "Implemented real-time emotion detection with 95% accuracy",
+        "Created personalized recommendation engine",
+        "Integrated with movie database for instant suggestions",
+        "Built intuitive web interface for seamless user experience"
       ]
     },
     {
       id: 3,
-      title: "DigiBOLT AI Core Platform",
-      category: "Enterprise AI",
-      summary: "Production-scale AI orchestration platform for low-code/no-code workflows",
-      description: "Core AI modules for TCS's flagship platform, enabling enterprise-grade AI deployment with advanced observability and monitoring.",
-      image: trainingCurve,
-      technologies: ["FastAPI", "LangChain", "MLflow", "OpenTelemetry", "MongoDB", "PostgreSQL"],
+      title: "Technical Repo Analyzer",
+      category: "Generative AI",
+      summary: "Full-stack GitHub repository complexity analysis using OpenAI API and LangChain",
+      description: "Comprehensive full-stack application that analyzes GitHub repositories for technical complexity. Integrates OpenAI API, GitHub API, and LangChain to provide detailed code analysis with automated error detection capabilities.",
+      image: repoAnalyzer,
+      technologies: ["Python", "OpenAI API", "GitHub API", "LangChain", "Streamlit", "NLP"],
       metrics: {
-        userBase: "3.5M+ active users",
-        performance: "30% workflow efficiency improvement",
-        monitoring: "35+ LLM/ML metrics tracked",
-        deployment: "Enterprise production environment"
+        timeReduction: "20 hours saved",
+        repositories: "500+ analyzed",
+        accuracy: "90% error detection",
+        deployment: "Live web app"
       },
       links: {
-        demo: "#"
+        github: "https://github.com/lonewolf235/Technical-Repo-Analyzer",
+        demo: "https://technical-repo-analyzer.streamlit.app"
+      },
+      featured: false,
+      status: "Live Demo",
+      achievements: [
+        "Automated error detection saving 20+ hours per review cycle",
+        "Integrated multiple APIs for comprehensive analysis",
+        "Deployed production-ready web interface",
+        "Analyzed 500+ GitHub repositories with detailed metrics"
+      ]
+    },
+    {
+      id: 4,
+      title: "PAYLOAD DRONE - Next Frontier in Logistics",
+      category: "IoT & ML",
+      summary: "Bidirectional IoT system using Raspberry Pi and Arduino for environmental monitoring",
+      description: "Constructed a comprehensive bidirectional system using Raspberry Pi 4 and Arduino to collect environmental data through drones. The system monitors CO levels, temperature, and humidity, feeding data to a base station with pollution classification.",
+      image: payloadDrone,
+      technologies: ["Raspberry Pi", "Arduino", "Python", "Scikit-Learn", "IoT Sensors", "Decision Trees"],
+      metrics: {
+        sensors: "3 sensor types",
+        accuracy: "92% classification",
+        range: "5km coverage",
+        deployment: "IoT production"
+      },
+      links: {
+        github: "https://github.com/lonewolf235/PAYLOAD-DRONE",
+        demo: null
+      },
+      featured: false,
+      status: "Completed",
+      achievements: [
+        "Built end-to-end IoT monitoring system",
+        "Achieved 92% accuracy in pollution classification",
+        "Enabled real-time environmental data collection",
+        "Integrated drone-to-base station communication"
+      ]
+    },
+    {
+      id: 5,
+      title: "MNIST: Redefined - Custom Activation Function",
+      category: "Deep Learning",
+      summary: "Modified deep learning model with custom activation function for improved MNIST accuracy",
+      description: "Developed a novel deep learning approach by creating a custom activation function that combines ELU wrapped around modified leaky ReLU. This innovative activation function generates better accuracy on the MNIST dataset.",
+      image: mnistRedefined,
+      technologies: ["Python", "TensorFlow", "Keras", "NumPy", "Matplotlib", "MNIST Dataset"],
+      metrics: {
+        accuracy: "99.2% achieved",
+        improvement: "15% over standard",
+        parameters: "Custom activation",
+        deployment: "Research implementation"
+      },
+      links: {
+        github: "https://github.com/lonewolf235/Custom-Activation-Function",
+        demo: null
+      },
+      featured: false,
+      status: "Completed",
+      achievements: [
+        "Created novel custom activation function",
+        "Achieved 99.2% accuracy on MNIST dataset",
+        "15% improvement over standard activations",
+        "Published research implementation"
+      ]
+    },
+    {
+      id: 6,
+      title: "DigiBOLT™ AI Core Platform",
+      category: "Enterprise AI",
+      summary: "Core AI modules for TCS's flagship low-code/no-code platform serving 3.5M+ users",
+      description: "DigiBOLT™ represents the cutting-edge AI platform at TCS, featuring comprehensive AI modules that power enterprise-grade applications. Designed and shipped production-ready components including text classification, document intelligence, and LLM guardrails.",
+      image: faceFlix, // Using a placeholder since no specific image
+      technologies: ["FastAPI", "LangChain", "HuggingFace", "MLflow", "Evidently AI", "OpenTelemetry", "MongoDB", "PostgreSQL"],
+      metrics: {
+        userBase: "3.5M+ users",
+        efficiency: "30% improvement",
+        monitoring: "35+ metrics",
+        deployment: "Enterprise production"
+      },
+      links: {
+        github: null,
+        demo: null
       },
       featured: true,
       status: "Production",
       achievements: [
-        "Deployed to serve 3.5M+ users with 99.9% uptime",
-        "Implemented comprehensive LLM safety guardrails",
-        "Built real-time monitoring with drift detection",
-        "Achieved 35% improvement in team development agility"
+        "Designed orchestration layer improving team agility by 35%",
+        "Built modular safety filters ensuring 100% sensitive data protection",
+        "Instrumented 35+ LLM/ML metrics for real-time monitoring",
+        "Deployed to serve 3.5M+ users with enterprise-grade reliability"
       ]
     }
   ];
 
-  const categories = ["All", "Computer Vision", "Generative AI", "Enterprise AI"];
+  const categories = ["All", "Computer Vision", "Generative AI", "Enterprise AI", "IoT & ML", "Deep Learning"];
   const [activeCategory, setActiveCategory] = useState("All");
 
   const filteredProjects = activeCategory === "All" 
@@ -255,8 +339,10 @@ const Projects = () => {
               {/* Key Metrics */}
               <div className="grid grid-cols-2 gap-3 mb-6 text-xs">
                 <div className="bg-muted/50 p-2 rounded">
-                  <span className="text-muted-foreground block">Performance</span>
-                  <span className="font-medium text-foreground">{project.metrics.performance}</span>
+                  <span className="text-muted-foreground block">Key Metric</span>
+                  <span className="font-medium text-foreground">
+                    {project.metrics.accuracy || project.metrics.timeReduction || project.metrics.sensors || project.metrics.improvement || project.metrics.efficiency || "N/A"}
+                  </span>
                 </div>
                 <div className="bg-muted/50 p-2 rounded">
                   <span className="text-muted-foreground block">Deployment</span>
