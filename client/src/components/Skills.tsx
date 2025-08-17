@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Code, Database, Cloud, Wrench, Brain, BarChart3 } from "lucide-react";
+import { Code, Database, Cloud, Wrench, Brain, BarChart3, Star, Zap } from "lucide-react";
 
 const Skills = () => {
   const [selectedCategory, setSelectedCategory] = useState('all');
@@ -89,10 +89,11 @@ const Skills = () => {
     ? skillCategories 
     : skillCategories.filter(cat => cat.id === selectedCategory);
 
-  const getSkillColor = (level: number) => {
-    if (level >= 90) return 'bg-accent';
-    if (level >= 80) return 'bg-primary';
-    return 'bg-muted-foreground';
+  const getSkillLevel = (level: number) => {
+    if (level >= 95) return { label: 'Expert', icon: '🚀', color: 'text-accent' };
+    if (level >= 85) return { label: 'Advanced', icon: '⭐', color: 'text-primary' };
+    if (level >= 75) return { label: 'Proficient', icon: '💎', color: 'text-foreground' };
+    return { label: 'Familiar', icon: '📚', color: 'text-muted-foreground' };
   };
 
   return (
@@ -148,43 +149,57 @@ const Skills = () => {
                 </h3>
               </div>
               
-              <div className="space-y-4">
-                {category.skills.map((skill, index) => (
-                  <div key={index} className="group">
-                    <div className="flex justify-between items-center mb-2">
-                      <span className="font-medium text-foreground group-hover:text-primary transition-colors">
-                        {skill.name}
-                      </span>
-                      <span className="text-sm text-muted-foreground">
-                        {skill.level}%
-                      </span>
+              <div className="grid gap-3">
+                {category.skills.map((skill, index) => {
+                  const skillLevel = getSkillLevel(skill.level);
+                  return (
+                    <div key={index} className="group p-3 rounded-lg bg-muted/10 hover:bg-muted/20 transition-all duration-300 border border-border/50 hover:border-primary/30">
+                      <div className="flex items-center justify-between mb-2">
+                        <div className="flex items-center space-x-2">
+                          <span className="text-lg">{skillLevel.icon}</span>
+                          <span className="font-medium text-foreground group-hover:text-primary transition-colors">
+                            {skill.name}
+                          </span>
+                        </div>
+                        <span className={`text-xs font-medium px-2 py-1 rounded-full bg-primary/10 ${skillLevel.color}`}>
+                          {skillLevel.label}
+                        </span>
+                      </div>
+                      
+                      <p className="text-xs text-muted-foreground opacity-70 group-hover:opacity-100 transition-opacity duration-300">
+                        {skill.description}
+                      </p>
                     </div>
-                    
-                    <div className="progress-bar">
-                      <div 
-                        className={`progress-fill ${getSkillColor(skill.level)}`}
-                        style={{ width: `${skill.level}%` }}
-                      />
-                    </div>
-                    
-                    <p className="text-xs text-muted-foreground mt-1 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                      {skill.description}
-                    </p>
-                  </div>
-                ))}
+                  );
+                })}
               </div>
             </div>
           ))}
         </div>
 
-        {/* Expertise Radar */}
-        <div className="mt-16 text-center">
-          <h3 className="text-2xl font-semibold text-foreground mb-8">Top Expertise Areas</h3>
-          <div className="flex flex-wrap justify-center gap-4">
-            {['Generative AI', 'LLMOps', 'Agentic Systems', 'MLOps', 'FastAPI', 'LangChain'].map((skill) => (
-              <span key={skill} className="skill-pill text-base px-6 py-3">
-                {skill}
-              </span>
+        {/* Core Expertise Highlight */}
+        <div className="mt-16">
+          <h3 className="text-3xl font-bold text-foreground mb-8 text-center">Core Expertise</h3>
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {[
+              { name: 'Generative AI', icon: <Brain className="w-6 h-6" />, desc: 'LLM applications & deployment' },
+              { name: 'LLMOps', icon: <Zap className="w-6 h-6" />, desc: 'Production LLM workflows' },
+              { name: 'Agentic Systems', icon: <BarChart3 className="w-6 h-6" />, desc: 'Multi-agent orchestration' },
+              { name: 'MLOps', icon: <Database className="w-6 h-6" />, desc: 'ML pipeline automation' },
+              { name: 'FastAPI', icon: <Code className="w-6 h-6" />, desc: 'High-performance APIs' },
+              { name: 'LangChain', icon: <Star className="w-6 h-6" />, desc: 'LLM application frameworks' }
+            ].map((expertise, index) => (
+              <div key={index} className="card-elegant p-6 text-center hover-lift group">
+                <div className="inline-flex items-center justify-center w-14 h-14 rounded-full bg-primary/10 text-primary mb-4 group-hover:bg-primary group-hover:text-primary-foreground transition-all duration-300">
+                  {expertise.icon}
+                </div>
+                <h4 className="font-semibold text-foreground mb-2 text-lg">
+                  {expertise.name}
+                </h4>
+                <p className="text-sm text-muted-foreground">
+                  {expertise.desc}
+                </p>
+              </div>
             ))}
           </div>
         </div>
