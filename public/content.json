@@ -1,0 +1,279 @@
+{
+  "personal": {
+    "name": "Prakash V.S. Tomar",
+    "title": "AI/ML Engineer | Generative AI Specialist",
+    "tagline": "Transforming complex data into intelligent solutions with cutting-edge ML techniques, specializing in LLMOps, Agentic Systems, and production-scale AI deployment.",
+    "email": "prakashvstomar@gmail.com",
+    "phone": "+91 8979790975",
+    "location": "Gandhinagar, India",
+    "social": {
+      "linkedin": "https://linkedin.com/in/lonewolf235",
+      "github": "https://github.com/lonewolf235",
+      "leetcode": "https://leetcode.com/lonewolf235"
+    }
+  },
+  "about": {
+    "summary": "I'm an AI/ML Engineer at Tata Consultancy Services, specializing in Generative AI, Agentic Systems, and LLMOps. With expertise spanning NLP, Computer Vision, and MLOps, I design and deploy production-scale AI solutions that handle massive datasets and real-time inference. My technical arsenal includes FastAPI, LangChain, HuggingFace, and cloud-native observability tools. I've architected AI systems that improve operational efficiency by 30% while maintaining enterprise-grade security and compliance standards. Beyond coding, I believe in reproducible coffee over magic – bringing the same systematic approach to both model development and my morning brew routine.",
+    "highlights": [
+      {
+        "title": "Production AI Systems",
+        "description": "Deployed ML solutions serving 3.5M+ users at TCS"
+      },
+      {
+        "title": "Efficiency Expert", 
+        "description": "Improved workflow efficiency by 30% with AI automation"
+      },
+      {
+        "title": "Technical Leadership",
+        "description": "Led ML workshops for 300+ students and professionals"
+      },
+      {
+        "title": "Team Collaboration",
+        "description": "Enhanced team agility by 35% through AI orchestration"
+      }
+    ]
+  },
+  "experience": [
+    {
+      "company": "Tata Consultancy Services (TCS)",
+      "role": "Data Scientist / Backend AI Engineer",
+      "location": "Gandhinagar, India",
+      "period": "Jul 2024 - Present",
+      "type": "Full-time",
+      "achievements": [
+        "Designed and shipped core AI modules for TCS's flagship low-code/no-code platform DigiBOLT™, powering 7+ production-grade components",
+        "Co-architected orchestration layer using FastAPI, SQL, and MongoDB, improving module access and team agility by 35%",
+        "Instrumented 35+ LLM/ML metrics via OpenTelemetry, Jaeger, MLflow, enabling real-time monitoring and drift detection",
+        "Built modular safety filters for PII, toxicity, bias ensuring 100% sensitive data protection across 10+ enterprise use cases",
+        "Deployed text classification pipeline serving 3.5M+ users, reducing manual effort by 85%"
+      ],
+      "technologies": ["FastAPI", "LangChain", "LangGraph", "HuggingFace", "MLflow", "OpenTelemetry", "MongoDB", "PostgreSQL"],
+      "keyProject": {
+        "title": "DigiBOLT™ Core AI Platform",
+        "description": "Enterprise-grade AI orchestration platform",
+        "impact": "30% workflow efficiency improvement"
+      }
+    },
+    {
+      "company": "HappyMonk.ai",
+      "role": "Data Science Intern",
+      "location": "Remote",
+      "period": "Oct 2022 - Apr 2023",
+      "type": "Internship",
+      "achievements": [
+        "Designed fully automated pipeline to fetch and structure annotated datasets, reducing data preparation time by 45%",
+        "Improved object detection and activity recognition accuracy by 18% using YOLOv5 and MMAction2",
+        "Enhanced spatial pothole density estimation by 30% via advanced GPS extraction and manipulation",
+        "Annotated 6000+ media files and integrated datasets into servers using PyMongo and MongoDB"
+      ],
+      "technologies": ["YOLOv5", "MMAction2", "PyTorch", "MongoDB", "CVAT", "PyMongo"],
+      "keyProject": {
+        "title": "Automated Dataset Processing Pipeline",
+        "description": "Computer vision data preparation automation",
+        "impact": "45% reduction in data prep time"
+      }
+    }
+  ],
+  "projects": [
+    {
+      "title": "RoadGuard: Smart Pothole Detection",
+      "category": "Computer Vision",
+      "summary": "Government-backed AI system for automated road hazard detection using YOLOv8",
+      "description": "Telangana Government project employing YOLOv8 technology to analyze road images and videos, successfully identifying and cataloging 3000+ large potholes within targeted regions.",
+      "technologies": ["YOLOv8", "Computer Vision", "Python", "OpenCV", "Government Partnership"],
+      "metrics": {
+        "datasetSize": "3,000+ annotated potholes",
+        "accuracy": "94.2% detection accuracy",
+        "impact": "25% reduction in road accidents",
+        "deployment": "Government production system"
+      },
+      "status": "Production",
+      "featured": true,
+      "achievements": [
+        "Reduced reported road accidents by 25% in designated Telangana areas",
+        "Processed 10,000+ road images with real-time inference",
+        "Integrated with government infrastructure monitoring systems",
+        "Achieved 94.2% precision in pothole detection under various weather conditions"
+      ]
+    },
+    {
+      "title": "Technical Repo Analyzer",
+      "category": "Generative AI",
+      "summary": "Full-stack GenAI application for automated code complexity analysis",
+      "description": "Developed using Python, OpenAI API, GitHub API, and LangChain for comprehensive code analysis with a Streamlit-hosted web interface.",
+      "technologies": ["OpenAI API", "LangChain", "Streamlit", "GitHub API", "Python"],
+      "metrics": {
+        "datasetSize": "500+ repositories analyzed", 
+        "performance": "20 hours saved per review cycle",
+        "accuracy": "89% error detection rate",
+        "deployment": "Cloud-hosted web application"
+      },
+      "status": "Live Demo",
+      "featured": false,
+      "achievements": [
+        "Automated error detection saving 20+ hours per code review cycle",
+        "Integrated multiple AI APIs for comprehensive analysis",
+        "Built intuitive Streamlit interface for non-technical users",
+        "Analyzed 500+ GitHub repositories with detailed complexity metrics"
+      ]
+    },
+    {
+      "title": "DigiBOLT AI Core Platform",
+      "category": "Enterprise AI",
+      "summary": "Production-scale AI orchestration platform for low-code/no-code workflows",
+      "description": "Core AI modules for TCS's flagship platform, enabling enterprise-grade AI deployment with advanced observability and monitoring.",
+      "technologies": ["FastAPI", "LangChain", "MLflow", "OpenTelemetry", "MongoDB", "PostgreSQL"],
+      "metrics": {
+        "userBase": "3.5M+ active users",
+        "performance": "30% workflow efficiency improvement",
+        "monitoring": "35+ LLM/ML metrics tracked",
+        "deployment": "Enterprise production environment"
+      },
+      "status": "Production",
+      "featured": true,
+      "achievements": [
+        "Deployed to serve 3.5M+ users with 99.9% uptime",
+        "Implemented comprehensive LLM safety guardrails",
+        "Built real-time monitoring with drift detection",
+        "Achieved 35% improvement in team development agility"
+      ]
+    }
+  ],
+  "skills": {
+    "languages": {
+      "title": "Programming Languages",
+      "skills": [
+        {"name": "Python", "level": 95, "description": "Primary language for ML/AI development"},
+        {"name": "SQL", "level": 90, "description": "Database design and complex queries"},
+        {"name": "Java", "level": 75, "description": "Enterprise applications and backend"},
+        {"name": "Bash", "level": 80, "description": "System automation and scripting"}
+      ]
+    },
+    "ai-ml": {
+      "title": "AI/ML Frameworks",
+      "skills": [
+        {"name": "LangChain", "level": 95, "description": "LLM application development"},
+        {"name": "HuggingFace", "level": 90, "description": "Transformer models and deployment"},
+        {"name": "TensorFlow", "level": 85, "description": "Deep learning and model training"},
+        {"name": "PyTorch", "level": 85, "description": "Research and production models"},
+        {"name": "Scikit-Learn", "level": 90, "description": "Classical ML algorithms"}
+      ]
+    },
+    "genai": {
+      "title": "GenAI & Agentic Tools",
+      "skills": [
+        {"name": "LangGraph", "level": 90, "description": "Multi-agent system orchestration"},
+        {"name": "Guardrails", "level": 85, "description": "LLM safety and validation"},
+        {"name": "Ollama", "level": 80, "description": "Local LLM deployment"},
+        {"name": "CrewAI", "level": 75, "description": "Agent collaboration frameworks"}
+      ]
+    },
+    "cloud": {
+      "title": "Cloud & Infrastructure",
+      "skills": [
+        {"name": "FastAPI", "level": 95, "description": "High-performance web APIs"},
+        {"name": "Docker", "level": 85, "description": "Containerization and deployment"},
+        {"name": "Linux", "level": 90, "description": "System administration and optimization"},
+        {"name": "MLflow", "level": 85, "description": "ML lifecycle management"}
+      ]
+    },
+    "observability": {
+      "title": "Observability & Monitoring",
+      "skills": [
+        {"name": "OpenTelemetry", "level": 85, "description": "Distributed tracing and metrics"},
+        {"name": "Jaeger", "level": 80, "description": "Request tracing and debugging"},
+        {"name": "Evidently AI", "level": 85, "description": "ML model monitoring and drift detection"},
+        {"name": "LangKit", "level": 80, "description": "LLM observability and evaluation"}
+      ]
+    },
+    "tools": {
+      "title": "Development Tools",
+      "skills": [
+        {"name": "Git", "level": 90, "description": "Version control and collaboration"},
+        {"name": "Jupyter", "level": 95, "description": "Interactive development and prototyping"},
+        {"name": "VSCode", "level": 90, "description": "IDE and development environment"},
+        {"name": "Streamlit", "level": 85, "description": "Rapid ML app prototyping"}
+      ]
+    }
+  },
+  "education": {
+    "degree": "Bachelor of Technology - CSE (Specialization in AIML)",
+    "institution": "Institute Of Engineering and Management",
+    "location": "Kolkata, India",
+    "period": "November 2020 - August 2024",
+    "gpa": "9.26",
+    "courses": ["OOPs", "Machine Learning", "DBMS", "Advanced Deep Learning", "AI", "Data Structures", "Data Warehousing and Mining", "Algorithms"]
+  },
+  "publications": [
+    {
+      "title": "Machine Learning - A New Perspective",
+      "type": "Review Paper",
+      "venue": "IEMPOWER 2022",
+      "status": "In Publication by AIP Publishing",
+      "description": "Presented introductory topics of Machine Learning and the selection between inference VS predictability"
+    }
+  ],
+  "certifications": [
+    {
+      "title": "Data Science Math Skills",
+      "issuer": "Duke University (Coursera)",
+      "url": "https://coursera.org/verify/..."
+    },
+    {
+      "title": "Deploy Agentspace Skill Badge",
+      "issuer": "Google Cloud",
+      "year": "2025",
+      "description": "Demonstrated ability to launch enterprise-ready AI agents using Gemini and cloud APIs"
+    },
+    {
+      "title": "Prompt Engineering Bootcamp",
+      "issuer": "Udemy",
+      "year": "2025",
+      "hours": "22.5 hours",
+      "instructors": "Mike Taylor & James Phoenix"
+    }
+  ],
+  "achievements": [
+    "AIR 2552 in GATE DA 2024",
+    "Amazon ML Challenge 2023 – Ranked 301st among 4898 teams nationally",
+    "Winner of Internal Hackathon, Kavach 2023, IEM Kolkata",
+    "Finalist (Top 6), Toastmasters Table Topics, District 41",
+    "Top 10 finalist, Intelligex ML Hackathon, IEM Innovacion 2022",
+    "Earned Diploma in Indian Classical Music (Vocal) in August-2019"
+  ],
+  "leadership": [
+    {
+      "role": "Machine Learning Co-Lead",
+      "organization": "IEM Coding Club",
+      "location": "Kolkata, India",
+      "period": "Aug 2022 - Present",
+      "description": "Conducted DS/ML workshops, mentoring 300+ students in applied AI"
+    },
+    {
+      "role": "AI/ML Core Member", 
+      "organization": "GDSC IEM",
+      "location": "Kolkata, India",
+      "period": "Aug 2022 - Jul 2023",
+      "description": "Facilitated ML workshops addressing real-world problems with 210+ participants"
+    },
+    {
+      "role": "Database Lead",
+      "organization": "IEM-UEM Marathon",
+      "location": "Kolkata, India",
+      "period": "Feb 2024",
+      "description": "Managed backend systems for marathon with 1500+ participants"
+    },
+    {
+      "role": "Database Lead & Advisor",
+      "organization": "Diversion 2k23 & 2k24 (MLH Sponsored)",
+      "location": "Kolkata, India", 
+      "period": "2023 - 2024",
+      "description": "Led DB architecture and tech advisory for national-level AI hackathons"
+    }
+  ],
+  "meta": {
+    "lastUpdated": "2024-12-17",
+    "version": "1.0",
+    "notes": "This content file can be easily edited to update portfolio information. All sections are customizable."
+  }
+}
