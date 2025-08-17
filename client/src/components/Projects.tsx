@@ -146,37 +146,10 @@ const Projects = () => {
         "15% improvement over standard activations",
         "Published research implementation"
       ]
-    },
-    {
-      id: 6,
-      title: "DigiBOLT™ AI Core Platform",
-      category: "Enterprise AI",
-      summary: "Core AI modules for TCS's flagship low-code/no-code platform serving 3.5M+ users",
-      description: "DigiBOLT™ represents the cutting-edge AI platform at TCS, featuring comprehensive AI modules that power enterprise-grade applications. Designed and shipped production-ready components including text classification, document intelligence, and LLM guardrails.",
-      image: faceFlix, // Using a placeholder since no specific image
-      technologies: ["FastAPI", "LangChain", "HuggingFace", "MLflow", "Evidently AI", "OpenTelemetry", "MongoDB", "PostgreSQL"],
-      metrics: {
-        userBase: "3.5M+ users",
-        efficiency: "30% improvement",
-        monitoring: "35+ metrics",
-        deployment: "Enterprise production"
-      },
-      links: {
-        github: null,
-        demo: null
-      },
-      featured: true,
-      status: "Production",
-      achievements: [
-        "Designed orchestration layer improving team agility by 35%",
-        "Built modular safety filters ensuring 100% sensitive data protection",
-        "Instrumented 35+ LLM/ML metrics for real-time monitoring",
-        "Deployed to serve 3.5M+ users with enterprise-grade reliability"
-      ]
     }
   ];
 
-  const categories = ["All", "Computer Vision", "Generative AI", "Enterprise AI", "IoT & ML", "Deep Learning"];
+  const categories = ["All", "Computer Vision", "Generative AI", "IoT & ML", "Deep Learning"];
   const [activeCategory, setActiveCategory] = useState("All");
 
   const filteredProjects = activeCategory === "All" 
