@@ -3,6 +3,8 @@ import About from "@/components/About";
 import Skills from "@/components/Skills";
 import Experience from "@/components/Experience";
 import Projects from "@/components/Projects";
+import Accomplishments from "@/components/Accomplishments";
+import Education from "@/components/Education";
 import Contact from "@/components/Contact";
 
 const Index = () => {
@@ -13,6 +15,8 @@ const Index = () => {
       <Skills />
       <Experience />
       <Projects />
+      <Accomplishments />
+      <Education />
       <Contact />
       
       {/* Footer */}
@@ -48,6 +52,18 @@ const Index = () => {
                 className="text-muted-foreground hover:text-primary transition-colors"
               >
                 Projects
+              </a>
+              <a 
+                href="#accomplishments" 
+                className="text-muted-foreground hover:text-primary transition-colors"
+              >
+                Accomplishments
+              </a>
+              <a 
+                href="#education" 
+                className="text-muted-foreground hover:text-primary transition-colors"
+              >
+                Education
               </a>
               <a 
                 href="#contact" 
