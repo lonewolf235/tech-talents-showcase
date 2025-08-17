@@ -54,7 +54,7 @@ const Projects = () => {
         deployment: "Web application"
       },
       links: {
-        github: "https://github.com/lonewolf235/FaceFlix",
+        github: "https://github.com/lonewolf235/Face_recognition",
         demo: null
       },
       featured: false,
@@ -109,7 +109,7 @@ const Projects = () => {
       },
       links: {
         github: "https://github.com/lonewolf235/PAYLOAD-DRONE",
-        demo: null
+        demo: "https://drive.google.com/file/d/1y1yjnUL-uMQacb6a8vgFWtBaxaNW5qtj/view"
       },
       featured: false,
       status: "Completed",
@@ -232,11 +232,18 @@ const Projects = () => {
 
                   {/* Action Buttons */}
                   <div className="flex flex-wrap gap-4">
-                    <Button className="btn-hero">
+                    <Button 
+                      className="btn-hero"
+                      onClick={() => window.open(featuredProject.links.research, '_blank')}
+                    >
                       <ExternalLink className="w-4 h-4 mr-2" />
                       View Research
                     </Button>
-                    <Button variant="outline" className="btn-outline-hero">
+                    <Button 
+                      variant="outline" 
+                      className="btn-outline-hero"
+                      onClick={() => window.open(featuredProject.links.github, '_blank')}
+                    >
                       <Github className="w-4 h-4 mr-2" />
                       Source Code
                     </Button>
@@ -340,13 +347,23 @@ const Projects = () => {
               {/* Action Buttons */}
               <div className="flex gap-2">
                 {project.links.demo && (
-                  <Button size="sm" variant="outline" className="flex-1">
+                  <Button 
+                    size="sm" 
+                    variant="outline" 
+                    className="flex-1"
+                    onClick={() => window.open(project.links.demo, '_blank')}
+                  >
                     <Eye className="w-3 h-3 mr-1" />
                     Demo
                   </Button>
                 )}
                 {project.links.github && (
-                  <Button size="sm" variant="outline" className="flex-1">
+                  <Button 
+                    size="sm" 
+                    variant="outline" 
+                    className="flex-1"
+                    onClick={() => window.open(project.links.github, '_blank')}
+                  >
                     <Github className="w-3 h-3 mr-1" />
                     Code
                   </Button>

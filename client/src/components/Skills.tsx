@@ -51,8 +51,7 @@ const Skills = () => {
         { name: 'Streamlit', level: 85, description: 'Rapid ML app prototyping' },
         { name: 'Pandas', level: 90, description: 'Data manipulation and analysis' },
         { name: 'NumPy', level: 85, description: 'Numerical computing' },
-        { name: 'Matplotlib', level: 85, description: 'Data visualization and plotting' },
-        { name: 'Seaborn', level: 80, description: 'Statistical data visualization' }
+        { name: 'Matplotlib', level: 85, description: 'Data visualization and plotting' }
       ]
     },
     {
@@ -79,8 +78,7 @@ const Skills = () => {
         { name: 'PostgreSQL', level: 85, description: 'Advanced relational database' },
         { name: 'MongoDB', level: 80, description: 'NoSQL document database' },
         { name: 'Linux', level: 90, description: 'System administration and optimization' },
-        { name: 'Windows', level: 80, description: 'Desktop environment and development' },
-        { name: 'Raspberry Pi', level: 75, description: 'IoT and embedded systems' }
+        { name: 'Windows', level: 80, description: 'Desktop environment and development' }
       ]
     }
   ];
