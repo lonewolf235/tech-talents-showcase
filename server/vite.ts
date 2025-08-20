@@ -36,12 +36,19 @@ export async function setupVite(app: Express, server: Server) {
         process.exit(1);
       },
     },
-    server: serverOptions,
+    server: {
+      middlewareMode: true,
+      hmr: { server },
+      allowedHosts: true as const, // Type assertion to satisfy the ServerOptions type
+    }, // Using the serverOptions defined above instead of duplicating config
     appType: "custom",
   });
 
   app.use(vite.middlewares);
-  app.use("*", async (req, res, next) => {
+  app.use('*', async (req, res, next) => {
+    if (req.originalUrl.startsWith('/api') || req.originalUrl.includes('.')) {
+      return next();
+    }
     const url = req.originalUrl;
 
     try {
