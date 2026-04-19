@@ -1,10 +1,9 @@
 import Hero from "@/components/Hero";
-import About from "@/components/About";
-import Skills from "@/components/Skills";
-import Experience from "@/components/Experience";
+import AIShowcase from "@/components/AIShowcase";
 import Projects from "@/components/Projects";
-import Accomplishments from "@/components/Accomplishments";
-import Education from "@/components/Education";
+import TechStack from "@/components/TechStack";
+import Timeline from "@/components/Timeline";
+import Recognition from "@/components/Recognition";
 import Contact from "@/components/Contact";
 import Header from "@/components/Header";
 
@@ -13,24 +12,12 @@ const Index = () => {
     <div className="min-h-screen">
       <Header />
       <Hero />
-      <About />
-      <Skills />
-      <Experience />
+      <AIShowcase />
       <Projects />
-      <Accomplishments />
-      <Education />
+      <TechStack />
+      <Timeline />
+      <Recognition />
       <Contact />
-      
-      {/* Footer */}
-      <footer className="bg-card border-t border-border py-8">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center md:text-left mb-4 md:mb-0">
-            <p className="text-muted-foreground">
-              © 2024 Prakash V.S. Tomar. Built with React, TypeScript, and Tailwind CSS.
-            </p>
-          </div>
-        </div>
-      </footer>
     </div>
   );
 };

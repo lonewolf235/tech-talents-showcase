@@ -1,96 +1,97 @@
-import { Button } from "@/components/ui/button";
-import { Github, Linkedin, Mail, ChevronDown } from "lucide-react";
-import heroImage from "/prakash pic.png";
+import { motion } from "framer-motion";
+import { ArrowDown } from "lucide-react";
 
 const Hero = () => {
-  const scrollToSection = (id: string) => {
-    document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' });
+  const scrollTo = (id: string) => {
+    document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
   };
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-      {/* Background Image */}
+    <section
+      id="hero"
+      className="relative min-h-screen flex items-center justify-center pt-24 pb-16 overflow-hidden bg-[#0A0A0A]"
+    >
       <div 
-        className="absolute inset-0 z-0 opacity-50"
-        style={{
-          backgroundImage: `url(${heroImage})`,
-          backgroundSize: 'cover',
-          backgroundPosition: 'center 20%',
-          backgroundRepeat: 'no-repeat'
-        }}
-      />
-      
-      {/* Gradient Overlay */}
-      <div className="absolute inset-0 z-10 hero-gradient opacity-90" />
-      
-      {/* Content */}
-      <div className="relative z-20 text-center px-4 sm:px-6 lg:px-8 max-w-4xl mx-auto">
-        <div className="animate-fade-in">
-          <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold text-white mb-6 hero-text-glow">
-            Prakash V.S. Tomar
-          </h1>
-          
-          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-medium text-white/90 mb-6">
-            AI/ML Engineer | Generative AI Specialist
-          </h2>
-          
-          <p className="text-xl sm:text-2xl text-white/80 mb-12 max-w-3xl mx-auto leading-relaxed">
-            Transforming complex data into intelligent solutions with cutting-edge ML techniques, 
-            specializing in LLMOps, Agentic Systems, and production-scale AI deployment.
-          </p>
-          
-          <div className="flex flex-col sm:flex-row gap-6 justify-center items-center mb-16">
-            <Button 
-              onClick={() => window.open('mailto:prakashvstomar@gmail.com', '_blank')}
-              className="btn-hero text-lg px-10 py-4 w-full sm:w-auto"
-            >
-              <Mail className="w-5 h-5 mr-2" />
-              Hire Me
-            </Button>
-            
-            <Button 
-              onClick={() => scrollToSection('projects')}
-              variant="outline"
-              className="btn-outline-hero text-lg px-10 py-4 w-full sm:w-auto"
-            >
-              View Projects
-            </Button>
-          </div>
-          
-          {/* Social Links */}
-          <div className="flex justify-center space-x-8 mb-16">
-            <a 
-              href="https://linkedin.com/in/lonewolf235" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="text-white/70 hover:text-white transition-colors duration-300 hover:scale-110 transform"
-            >
-              <Linkedin className="w-8 h-8" />
-            </a>
-            <a 
-              href="https://github.com/lonewolf235" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="text-white/70 hover:text-white transition-colors duration-300 hover:scale-110 transform"
-            >
-              <Github className="w-8 h-8" />
-            </a>
-            <a 
-              href="mailto:prakashvstomar@gmail.com"
-              className="text-white/70 hover:text-white transition-colors duration-300 hover:scale-110 transform"
-            >
-              <Mail className="w-8 h-8" />
-            </a>
-          </div>
-          
-          {/* Scroll Indicator */}
-          <div 
-            onClick={() => scrollToSection('about')}
-            className="animate-bounce cursor-pointer"
+        className="absolute inset-0 z-0 opacity-25 mix-blend-luminosity bg-center bg-cover bg-no-repeat"
+        style={{ backgroundImage: 'url("/prakash pic.png")' }}
+      >
+        {/* Soft fade overlay so text remains entirely readable */}
+        <div className="absolute inset-0 bg-gradient-to-b from-[#0A0A0A]/50 via-[#0A0A0A]/80 to-[#0A0A0A]"></div>
+      </div>
+
+      <div className="relative z-10 w-full max-w-7xl mx-auto px-6 md:px-12 flex flex-col items-center">
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, ease: "easeOut" }}
+          className="text-center flex flex-col items-center"
+        >
+          {/* Headshot Image */}
+          <motion.div 
+            initial={{ opacity: 0, scale: 0.9 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ delay: 0.2, duration: 0.8, ease: "easeOut" }}
+            className="mb-12 relative"
           >
-            <ChevronDown className="w-8 h-8 text-white/60 mx-auto" />
+            <div 
+              className="w-48 h-48 md:w-56 md:h-56 mx-auto overflow-hidden rounded-full"
+              style={{
+                WebkitMaskImage: "radial-gradient(circle, black 50%, transparent 100%)",
+                maskImage: "radial-gradient(circle, black 50%, transparent 100%)"
+              }}
+            >
+              <img 
+                src="/gemini-profile.png" 
+                alt="Prakash V.S. Tomar" 
+                className="w-full h-full object-cover scale-110 translate-y-2 grayscale hover:grayscale-0 transition-all duration-700"
+              />
+            </div>
+            {/* Accents (Optional, kept minimal) */}
+            <div className="absolute -top-4 -left-4 w-8 h-8 border-t border-l border-primary opacity-50"></div>
+            <div className="absolute -bottom-4 -right-4 w-8 h-8 border-b border-r border-primary opacity-50"></div>
+          </motion.div>
+
+          {/* Typography */}
+          <h1 className="heading-display mb-6 tracking-tight">
+            PRAKASH V.S. TOMAR
+          </h1>
+
+          <h2 className="text-xl md:text-2xl font-structural text-primary mb-6 tracking-wide">
+            Generative AI Engineer & Agentic Systems Builder.
+          </h2>
+
+          <p className="body-mono mb-12 max-w-2xl mx-auto">
+            Architecting production ML pipelines serving 3.5M+ users. 
+            I build intelligence that scales, from context-aware RAG systems 
+            to robust LLM guardrails.
+          </p>
+
+          <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
+            <button
+              onClick={() => scrollTo("projects")}
+              className="btn-primary"
+            >
+              View Production Work
+            </button>
+            <button
+              onClick={() => scrollTo("ai-showcase")}
+              className="btn-outline gap-3"
+            >
+              Ask the AI <ArrowDown className="w-4 h-4 animate-bounce" />
+            </button>
           </div>
-        </div>
+        </motion.div>
+
+        {/* Minimal Scroll Indicator */}
+        <motion.div
+           initial={{ opacity: 0 }}
+           animate={{ opacity: 1 }}
+           transition={{ delay: 1.5 }}
+           className="absolute bottom-12 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2"
+        >
+          <span className="text-[10px] uppercase tracking-[0.2em] font-mono text-muted-foreground/60">Scroll</span>
+          <div className="w-[1px] h-12 bg-gradient-to-b from-primary/50 to-transparent"></div>
+        </motion.div>
       </div>
     </section>
   );
