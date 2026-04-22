@@ -1,9 +1,5 @@
-// Gemini API helpers — uses gemini-2.5-flash via REST API
-// No SDK needed, direct fetch calls from the browser
-
-const API_KEY = import.meta.env.VITE_GEMINI_API_KEY;
-const MODEL = "gemini-2.5-flash";
-const BASE_URL = `https://generativelanguage.googleapis.com/v1beta/models/${MODEL}`;
+// Gemini API helpers — calls go through our Vercel serverless API routes
+// The API key never touches the browser; it stays on the server
 
 interface GeminiMessage {
   role: "user" | "model";
@@ -11,36 +7,22 @@ interface GeminiMessage {
 }
 
 /**
- * Stream a chat response from Gemini.
+ * Stream a chat response via our server-side proxy.
  * Yields text chunks as they arrive.
  */
 export async function* streamChat(
   systemPrompt: string,
   messages: GeminiMessage[]
 ): AsyncGenerator<string> {
-  const url = `${BASE_URL}:streamGenerateContent?alt=sse&key=${API_KEY}`;
-
-  const body = {
-    system_instruction: {
-      parts: [{ text: systemPrompt }],
-    },
-    contents: messages,
-    generationConfig: {
-      temperature: 0.7,
-      maxOutputTokens: 1024,
-      topP: 0.9,
-    },
-  };
-
-  const response = await fetch(url, {
+  const response = await fetch("/api/chat", {
     method: "POST",
     headers: { "Content-Type": "application/json" },
-    body: JSON.stringify(body),
+    body: JSON.stringify({ systemPrompt, messages }),
   });
 
   if (!response.ok) {
     const error = await response.text();
-    throw new Error(`Gemini API error: ${response.status} — ${error}`);
+    throw new Error(`API error: ${response.status} — ${error}`);
   }
 
   const reader = response.body?.getReader();
@@ -74,42 +56,24 @@ export async function* streamChat(
 }
 
 /**
- * Generate a cover letter (non-streaming, returns full text).
+ * Generate text (non-streaming) via our server-side proxy.
+ * Used for cover letters, tech explanations, etc.
  */
 export async function generateText(
   systemPrompt: string,
   userMessage: string
 ): Promise<string> {
-  const url = `${BASE_URL}:generateContent?key=${API_KEY}`;
-
-  const body = {
-    system_instruction: {
-      parts: [{ text: systemPrompt }],
-    },
-    contents: [
-      {
-        role: "user",
-        parts: [{ text: userMessage }],
-      },
-    ],
-    generationConfig: {
-      temperature: 0.7,
-      maxOutputTokens: 2048,
-      topP: 0.9,
-    },
-  };
-
-  const response = await fetch(url, {
+  const response = await fetch("/api/generate", {
     method: "POST",
     headers: { "Content-Type": "application/json" },
-    body: JSON.stringify(body),
+    body: JSON.stringify({ systemPrompt, userMessage }),
   });
 
   if (!response.ok) {
     const error = await response.text();
-    throw new Error(`Gemini API error: ${response.status} — ${error}`);
+    throw new Error(`API error: ${response.status} — ${error}`);
   }
 
   const data = await response.json();
-  return data?.candidates?.[0]?.content?.parts?.[0]?.text || "No response generated.";
+  return data.text || "No response generated.";
 }
